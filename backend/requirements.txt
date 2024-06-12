@@ -1,0 +1,7 @@
+Flask
+flask-cors
+tweepy
+flask_login
+flask_sqlalchemy
+flask_bcrypt
+flask_login
