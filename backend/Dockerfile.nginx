@@ -6,7 +6,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY conf.d/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy the build files from the planning-app build directory
-COPY planning-app/build /usr/share/nginx/html
+COPY nginx-service/planning-app/build /usr/share/nginx/html
 
 # Expose the necessary ports
 EXPOSE 80
