@@ -6,7 +6,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY conf.d/default.conf /etc/nginx/conf.d/default.conf
 
 # Copier les fichiers de build de l'application React dans le répertoire approprié de NGINX
-COPY planning-app/build /usr/share/nginx/html
+ADD planning-app/build /usr/share/nginx/html
 
 # Exposer les ports nécessaires
 EXPOSE 80
