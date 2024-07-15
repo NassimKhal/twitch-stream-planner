@@ -1,0 +1,220 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.schedule-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.schedule-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.validate-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.planning-view-container {
+  height: 600px; /* Hauteur fixe pour le cadre pointillé */
+  width: 100%; /* Largeur fixe pour le cadre pointillé */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error {
+  color: red;
+}
+
+.action-buttons {
+  margin: 20px 0;
+}
+
+.save-button,
+.tweet-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+.twitch-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.day-plan {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: top;
+  background-color: rgb(255, 255, 255);
+}
+
+.twitch-logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.twitch-text {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255); /* Transparence à 70% */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.tweet-button {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+content {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
+
+input[type="file"] {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  padding: 20px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+.planning-preview {
+  border: 2px dashed rgb(240, 0, 0);
+  padding: 20px;
+  margin-top: 20px;
+  background-size: cover;
+  background-position: center;
+  width: 100%; /* S'assurer que le planning ne dépasse pas la largeur du conteneur */
+}
+
+.day-off {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255); /* Fond blanc si pas de créneau */
+  opacity: 0.2;
+}
+
+.day-off-text {
+  font-size: 24px;
+  font-weight: bold;
+  writing-mode: vertical-rl; /* Écrire verticalement */
+  text-orientation: mixed; /* S'assurer que le texte est orienté correctement */
+}
+
+.planning-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.planning-table th, .planning-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.day-column {
+  vertical-align: top;
+}
+
+.slot {
+  color: white;
+  padding: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}

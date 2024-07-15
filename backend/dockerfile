@@ -1,10 +1,26 @@
-FROM python:3.8-slim
+# Utiliser une image de base officielle Python.
+FROM python:3.9-slim
 
+# Définir le répertoire de travail dans le conteneur
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+# Copier les fichiers de dépendances et installer les dépendances.
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copier les certificats SSL
+COPY certs/localhost.crt /etc/nginx/ssl/localhost.crt
+COPY certs/localhost.key /etc/nginx/ssl/localhost.key
+
+# Copier le reste des fichiers de l'application dans le conteneur.
 COPY . .
 
-CMD ["python", "app.py"]
+# Définition de la variable d'environnement 'FLASK_APP'
+ENV FLASK_APP src/app.py
+ENV FLASK_RUN_HOST 0.0.0.0
+
+# Exposer le port sur lequel l'application s'exécute.
+EXPOSE 5000
+
+# Définir la commande pour démarrer l'application.
+CMD ["flask", "run", "--debug", "--host=0.0.0.0"]

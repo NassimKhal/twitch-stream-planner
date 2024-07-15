@@ -1,0 +1,170 @@
+/* General Styles */
+.app {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+.App-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+  }
+  
+.error {
+    color: red;
+  }
+.img-upl {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}  
+.action-buttons, .buttons-container {
+    margin: 20px 0;
+  }
+  
+  /* Planning Table Styles */
+.schedule-table, .planning-table {
+    margin: 20px auto;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+.schedule-table th, .planning-table th,
+.schedule-table td, .planning-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+.schedule-table th, .planning-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.schedule-table th{
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+.validate-button, .btn-valider {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+.delete-button, .btn-delete, .btn-danger {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+.planning-view-container {
+    height: 600px; /* Hauteur fixe pour le cadre pointillé */
+    width: 100%; /* Largeur fixe pour le cadre pointillé */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.twitch-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+.twitch-logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+.twitch-text {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255); /* Transparence à 70% */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+.tweet-button, .btn-tweet, .btn-info {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+  }
+
+  .btn-enregis {
+    background-color: green;
+    color: white;
+    border: none;
+  }
+  /* Planning Preview Styles */
+.planning-preview {
+    border: 2px dashed rgb(255, 0, 0);
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: content-box;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 5px; /* S'assurer que le planning ne dépasse pas la largeur du conteneur */
+  }
+
+.day-off {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Fond blanc si pas de créneau */
+  }
+  
+.day-off-text {
+    font-size: 24px;
+    font-weight: bold;
+    writing-mode: vertical-rl; /* Écrire verticalement */
+    text-orientation: mixed; /* S'assurer que le texte est orienté correctement */
+  }
+  
+.day-column {
+    vertical-align: top;
+    position: relative;
+  }
+  
+.slot {
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 2.5%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.slot-time {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+.slot-theme {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+  }
+  
+  

@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "axios": "^1.7.2"
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "react-twitter-widgets": "^1.11.0"
   }
 }

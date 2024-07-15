@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app
+  labels:
+    app: flask-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: flask-app
+  template:
+    metadata:
+      labels:
+        app: flask-app
+    spec:
+      containers:
+      - name: flask-app
+        image: "{{ .Values.image.flaskApp.repository }}:{{ .Values.image.flaskApp.tag }}"
+        ports:
+        - containerPort: {{ .Values.service.flaskAppPort }}
+        env:
+        - name: FLASK_ENV
+          value: "production"
+        - name: FLASK_APP
+          value: "src/app.py"
+        - name: FLASK_RUN_HOST
+          value: "0.0.0.0"

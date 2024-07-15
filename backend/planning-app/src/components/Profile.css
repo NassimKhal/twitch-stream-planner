@@ -1,0 +1,74 @@
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.twitter-linked,
+.twitter-link {
+    margin-left: 20px;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.profile-details p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.bio-form {
+    margin-top: 20px;
+}
+
+.bio-form .form-group {
+    margin-bottom: 15px;
+}
+
+.bio-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.bio-preview {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bio-preview h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.bio-preview p {
+    font-size: 14px;
+    color: #666;
+}
+
+.btn-danger {
+    margin-top: 10px;
+    background-color: #dc3545;
+    color: white;
+}

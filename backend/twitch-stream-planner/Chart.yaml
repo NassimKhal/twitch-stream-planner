@@ -1,0 +1,6 @@
+apiVersion: v2
+name: twitch-stream-planner
+description: A Helm chart for deploying Twitch Stream Planner
+type: application
+version: 0.1.0
+appVersion: "1.0"

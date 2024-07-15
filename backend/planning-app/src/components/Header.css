@@ -1,0 +1,67 @@
+/* src/components/Header.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand, .nav-link {
+  color: #fff !important;
+}
+
+.btn-twitch {
+  background-color: #6441a5;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.twitch-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.logout-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+  margin-right: 15px;
+}
+
+.navbar-nav .dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: auto;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
