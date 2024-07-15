@@ -10,3 +10,4 @@ COPY planning-app/build /usr/share/nginx/html
 
 # Expose the necessary ports
 EXPOSE 80
+EXPOSE 443
