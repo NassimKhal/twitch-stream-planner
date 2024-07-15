@@ -1,12 +1,12 @@
-# Utiliser une image de base officielle NGINX
+# Use an official NGINX image as the base
 FROM nginx:latest
 
-# Copier les fichiers de configuration NGINX
+# Copy NGINX configuration files
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY conf.d/default.conf /etc/nginx/conf.d/default.conf
 
-# Copier les fichiers de build de l'application React dans le répertoire approprié de NGINX
-COPY ./planning-app/build /usr/share/nginx/html
+# Copy the build files from the planning-app build directory
+COPY planning-app/build /usr/share/nginx/html
 
-# Exposer les ports nécessaires
+# Expose the necessary ports
 EXPOSE 80
