@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-app-{{ .Values.image.flaskApp.env }}
+  name: flask-app
   labels:
-    app: flask-app-{{ .Values.image.flaskApp.env }}
+    app: flask-app
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: flask-app-{{ .Values.image.flaskApp.env }}
+      app: flask-app
   template:
     metadata:
       labels:
-        app: flask-app-{{ .Values.image.flaskApp.env }}
+        app: flask-app
     spec:
       containers:
-      - name: flask-app-{{ .Values.image.flaskApp.env }}
+      - name: flask-app
         image: "{{ .Values.image.flaskApp.repository }}:{{ .Values.image.flaskApp.tag }}"
         ports:
         - containerPort: {{ .Values.service.flaskAppPort }}

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-proxy-{{ .Values.image.nginx.env }}
+  name: nginx-proxy
   labels:
-    app: nginx-proxy-{{ .Values.image.nginx.env }}
+    app: nginx-proxy
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: nginx-proxy-{{ .Values.image.nginx.env }}
+      app: nginx-proxy
   template:
     metadata:
       labels:
-        app: nginx-proxy-{{ .Values.image.nginx.env }}
+        app: nginx-proxy
     spec:
       containers:
-      - name: nginx-proxy-{{ .Values.image.nginx.env }}
+      - name: nginx-proxy
         image: "{{ .Values.image.nginxProxy.repository }}:{{ .Values.image.nginxProxy.tag }}"
         ports:
         - containerPort: {{ .Values.service.nginxProxyPort }}
