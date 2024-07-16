@@ -35,6 +35,8 @@ jobs:
           IMAGE_TAG=$(date +%Y%m%d%H%M%S)
           
           ls -la 
+          cd backend 
+          ls -la
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile.nginx .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
