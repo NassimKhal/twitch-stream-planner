@@ -27,6 +27,19 @@ jobs:
           aws configure set default.region $AWS_REGION
           aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin ${{ secrets.ECR_REGISTRY }}
 
+      - name: Build, push NGINX
+        env:
+          ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
+        run: |
+          IMAGE_TAG=$(date +%Y%m%d%H%M%S)
+          
+          ls -la 
+          cd backend 
+          ls -la
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile.nginx .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
       - name: Build, push FLASK
         env:
           ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
@@ -40,20 +53,10 @@ jobs:
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f dockerfile .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
+
       - name: Logout from ECR
         run: docker logout ${{ secrets.ECR_REGISTRY }}
 
-      - name: Build, push NGINX
-        env:
-          ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
-          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
-        run: |
-          IMAGE_TAG=$(date +%Y%m%d%H%M%S)
-          
-          ls -la 
-          cd backend 
-          ls -la
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile.nginx .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
 
 
