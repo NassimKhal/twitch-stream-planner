@@ -18,7 +18,7 @@ spec:
         pathType: {{ .pathType }}
         backend:
           service:
-            name: nginx-proxy-{{ .Values.image.nginx.env }}
+            name: nginx-proxy
             port:
               number: {{ $.Values.service.nginxProxyPort }}
       {{- end }}
