@@ -1,0 +1,34 @@
+replicaCount: 1
+
+image:
+  flaskApp:
+    # repository: fragmendal/flask_app
+    repository: 989812915549.dkr.ecr.us-west-2.amazonaws.com/ecr-tsp
+    tag: latest
+  nginxProxy:
+    repository: fragmendal/nginx_proxy
+    tag: latest
+
+service:
+  type: ClusterIP
+  flaskAppPort: 5000
+  nginxProxyPort: 80
+  nginxProxyPortSecure: 443
+
+ingress:
+  enabled: true
+  annotations:
+    alb.ingress.kubernetes.io/group.name: tsp-dev-alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/ssl-redirect: "443"
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 80}, {"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-west-2:989812915549:certificate/a6177b81-68a7-4d25-95ed-67f051a19d7c
+  hosts:
+    - host: dev.twitch-stream-planner.uk
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - hosts:
+        - dev.twitch-stream-planner.uk
