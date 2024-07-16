@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-proxy
+  name: nginx-proxy-{{ .Values.image.nginx.env }}
   labels:
-    app: nginx-proxy
+    app: nginx-proxy-{{ .Values.image.nginx.env }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -16,4 +16,4 @@ spec:
       protocol: TCP
       name: https
   selector:
-    app: nginx-proxy
+    app: nginx-proxy-{{ .Values.image.nginx.env }}

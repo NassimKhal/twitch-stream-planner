@@ -5,9 +5,11 @@ image:
     # repository: fragmendal/flask_app
     repository: 989812915549.dkr.ecr.us-west-2.amazonaws.com/ecr-tsp
     tag: latest
+    env: dev
   nginxProxy:
     repository: fragmendal/nginx_proxy
     tag: latest
+    env: dev
 
 service:
   type: ClusterIP
