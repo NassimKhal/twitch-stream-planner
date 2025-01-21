@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   flaskApp:
     # repository: fragmendal/flask_app
-    repository: 989812915549.dkr.ecr.us-west-2.amazonaws.com/ecr-tsp
+    repository: example.dkr.ecr.us-west-2.amazonaws.com/ecr-tsp
     tag: latest
   nginxProxy:
     repository: fragmendal/nginx_proxy
