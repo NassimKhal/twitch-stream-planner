@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   flaskApp:
     # repository: fragmendal/flask_app
-    repository: 989812915549.dkr.ecr.us-west-2.amazonaws.com/ecr-tsp
+    repository: example.dkr.ecr.us-west-2.amazonaws.com/ecr-tsp
     tag: latest
     env: prod
   nginxProxy:
@@ -25,7 +25,7 @@ ingress:
     alb.ingress.kubernetes.io/ssl-redirect: "443"
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 80}, {"HTTPS": 443}]'
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-west-2:989812915549:certificate/a6177b81-68a7-4d25-95ed-67f051a19d7c
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-west-2:example:certificate/example
   hosts:
     - host: twitch-stream-planner.uk
       paths:
